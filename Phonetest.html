@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Career Guidance System</title>
+  <link rel="stylesheet" href="IndexStyle1.css" />
+  <link rel="icon" type="image/png" href="logo1.png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="logo1.png" alt="Logo" class="logo">
+      </a>
+    </div>
+
+    <nav class="nav-right">
+      <a href="index.html">Test</a>
+      <a href="AboutUs.html">About</a>
+      <a href="careers.html">Careers</a>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </header>
+
+  <div class="question-page">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="category active">
+        <div class="category-header">
+          <span class="indicator">●</span> Creative Technical Skills
+        </div>
+        <ul class="question-list">
+          <li><a href="#" onclick="showQuestion(1)">Question 1</a></li>
+          <li><a href="#" onclick="showQuestion(2)">Question 2</a></li>
+          <li><a href="#" onclick="showQuestion(3)">Question 3</a></li>
+          <li><a href="#" onclick="showQuestion(4)">Question 4</a></li>
+          <li><a href="#" onclick="showQuestion(5)">Question 5</a></li>
+          <li><a href="#" onclick="showQuestion(6)">Question 6</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-header">
+          <span class="indicator hollow">○</span> Career Nature
+        </div>
+        <ul class="question-list">
+          <li><a href="#" onclick="showQuestion(7)">Question 1</a></li>
+          <li><a href="#" onclick="showQuestion(8)">Question 2</a></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-header">
+          <span class="indicator hollow">○</span> Growth & Philosophy
+        </div>
+        <ul class="question-list">
+          <li><a href="#" onclick="showQuestion(9)">Question 1</a></li>
+          <li><a href="#" onclick="showQuestion(10)">Question 2</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="question-content">
+      <h1 id="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+      <div class="answer-buttons">
+        <button class="answer-btn">Yes</button>
+        <button class="answer-btn">Maybe</button>
+        <button class="answer-btn">No</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Your Creative Path, Made Clear.</p>
+    <a href="Feedback.html" class="footer-link">Feedback</a>
+  </footer>
+
+  <script>
+    // Question switch
+    function showQuestion(num) {
+      document.getElementById("question-text").innerText = "This is Question " + num;
+    }
+
+    // Sidebar toggle for mobile
+    document.getElementById("menuToggle").addEventListener("click", function () {
+      document.getElementById("sidebar").classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
